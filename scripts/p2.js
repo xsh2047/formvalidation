@@ -21,6 +21,7 @@ function onSubmit(){
 	password = $('#password');
 	confirm = $('#confirm');
 	email = $('#email');
+	yos = $('#yos');
 	hidden = $('#hidden');
 	patt = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 	valid = true;
@@ -29,23 +30,30 @@ function onSubmit(){
 		if(this.value == null || this.value == ""){
 			displayError('#errors');
 			displayError('#empty');
+			$(this).addClass('invalid');
 			valid = false;
-			return false;
 		}
 	});
 
 	if(password.val() != confirm.val()){
 		displayError('#errors');
 		displayError('#mismatched');
+		password.addClass('invalid');
+		confirm.addClass('invalid');
 		valid = false;
 	}
 
-	console.log(password.val());
-	console.log(confirm.val());
+	console.log(yos.val());
+	if(parseInt(yos.val()) < 1 || parseInt(yos.val()) > 50){
+		displayError('#errors');
+		displayError('#outofbounds');
+		yos.addClass('invalid');
+	}
 	
 	if(!(patt.test(email.val()))){
 		displayError('#errors');
 		displayError('#invalid');
+		email.addClass('invalid');
 		valid = false;
 	}
 	
@@ -64,6 +72,11 @@ function init(){
 	$('.error').each(function(){
 		if(!$(this).hasClass("hidden")){
 			$(this).addClass("hidden");
+		}
+	});
+	$('.field').each(function(){
+		if($(this).hasClass("invalid")){
+			$(this).removeClass("invalid");
 		}
 	});
 }

@@ -18,7 +18,7 @@
 			<span>Constituency:</span>
 			<input type="text" name="constituency" class="field">
 			<span>Years Of Service:</span>
-			<input type="number" name="yos" class="field">	
+			<input type="text" name="yos" id="yos" class="field">	
 		</fieldset>
 		<fieldset>
 			<span>Password:</span>
@@ -43,6 +43,9 @@
 			</li>
 			<li>
 				<h3 id="invalid" class="hidden error">Email format invalid.</h3>
+			</li>
+			<li>
+				<h3 id="outofbounds" class="hidden error">Invalid value for Years of Service.</h3>
 			</li>
 			<li>
 				<h3 id="critical" class="hidden error">Critical Error. Possible Hacker found.</h3>
