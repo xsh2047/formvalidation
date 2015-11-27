@@ -1,0 +1,53 @@
+<!DOCTYPE <html>
+<head>
+	<title>MP creation form</title>
+	<link rel="stylesheet" type="text/css" href="styles/p2.css">
+	<!--script src="//code.jquery.com/jquery-1.11.3.min.js"></script-->
+	<script type="text/javascript" src="scripts/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="scripts/p2.js"></script>
+</head>
+<body>
+	<form onsubmit="return(onSubmit());">
+		<fieldset>
+			<span>First Name:</span>
+			<input type="text" name="firstname" class="field">
+			<span>Last Name:</span>
+			<input type="text" name="lastname" class="field">
+			<span>Email:</span>
+			<input type="text" name="email" id="email" class="field">	
+			<span>Constituency:</span>
+			<input type="text" name="constituency" class="field">
+			<span>Years Of Service:</span>
+			<input type="number" name="yos" class="field">	
+		</fieldset>
+		<fieldset>
+			<span>Password:</span>
+			<input type="password" name="password" id="password" class="field">
+			<span>Password Confirmation:</span>
+			<input type="password" name="confirm" id="confirm" class="field">
+			<input type="hidden" name="validate" value="“6eb6ac241942dc7226aeb" id="hidden">
+		</fieldset>
+		<fieldset>
+			<input type="submit" value="Submit" id="submit">
+		</fieldset>
+	</form>
+
+	<div id="errors" class="hidden error">
+		<h2>Please fix the following errors then try again:</h2>
+		<ul>
+			<li>
+				<h3 id="empty" class="hidden error">No Field can be left empty.</h3>
+			</li>
+			<li>
+				<h3 id="mismatched" class="hidden error">Passwords don't match.</h3>
+			</li>
+			<li>
+				<h3 id="invalid" class="hidden error">Email format invalid.</h3>
+			</li>
+			<li>
+				<h3 id="critical" class="hidden error">Critical Error. Possible Hacker found.</h3>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

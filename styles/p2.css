@@ -1,0 +1,28 @@
+fieldset{
+	margin: auto;
+	width: 20%;
+}
+
+body{
+	font-family: "Tahoma";
+	font-size: 13px;
+}
+
+input {
+	display:block;
+	margin: 10px;
+}
+
+fieldset{
+	border: none;
+}
+
+.invalid{
+	background: #FF9999;
+}
+
+.hidden{
+	display: none;
+	margin: auto;
+	width: 40%;
+}

@@ -1,0 +1,35 @@
+body{
+	font-family: "Tahoma";
+	font-size: 13px;
+}
+
+th.left-align{
+	    text-align: left;
+	    padding-right: 2em;
+}
+
+td.center-align{
+	text-align: center;
+}
+
+td.email:hover{
+	color: #cc6600;
+}
+
+.heavy-font{
+	font-weight: bold;
+}
+
+table{
+	border: 10px solid  #d0d0ff;
+	padding: 20px;
+}
+
+tr:nth-last-child(-n+3) {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+tr#last-child td{ 
+	border-top: 2px solid black;
+}
